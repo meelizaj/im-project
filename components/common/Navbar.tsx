@@ -11,7 +11,7 @@ export const Navbar = () => {
 
 	return (
 		<>
-			<nav className="flex justify-between items-center h-15 lg:bg-white-1000">
+			<nav className="flex justify-between items-center h-15 lg:bg-[#f0f5f7]">
 				<div className= "font-bold text-2xl m-5">
 					<h1>Zenith Care</h1>
 				</div>
