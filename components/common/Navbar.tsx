@@ -1,32 +1,34 @@
+import Image from 'next/image';
+
+
 export const Navbar = () => {
 
 	const Nav = {
 		data: [
 			{ name: "Home", href: "/" },
-			{ name: "About", href: "/about" },
-			{ name: "Services", href: "/services" },
-			{ name: "Contact", href: "/contact" }
+			{ name: "About", href: "#about" },
+			{ name: "Services", href: "#services" },
+			{ name: "Contact", href: "#contact" }
 		]
 	}
 
 	return (
 		<>
-			<nav className="flex justify-between items-center h-15 lg:bg-[#f0f5f7]">
-				<div className= "font-bold text-2xl m-5">
-					<h1>Zenith Care</h1>
+			<nav className="flex justify-between items-center h-19 lg:bg-white rounded-full mt-10 ml-10 mr-10 z-1 shadow-lg">
+				<div className= "flex flex-row font-bold text-2xl m-5 gap-5">
+                    <Image src="/IMlogo1.png" alt="Logo" 
+                    width={60} height={100} />
+					<h1 className="text-center mt-4">Zenith Care</h1>
 				</div>
 				<div>
-					<ul className="flex gap-20 text-lg">
+					<ul className="flex gap-15 text-xl font-light m-15 ">
 						{Nav.data.map((data, index) => (
-							<li key={index}>
+							<li key={index} className="hover:text-blue-500 hover:underline transition-colors duration-300">
 								 <a href={data.href}>{data.name}</a>
 							</li>
 						))}
 					</ul>
 				</div>
-				<button className="m-5 px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600">
-					Book Appointment
-				</button>
 			</nav>
 		</>
 	);

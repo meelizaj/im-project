@@ -3,9 +3,9 @@ import Link from "next/link";
 const footerSections = {
   links: [
     { name: "Home", href: "/" },
-    { name: "About", href: "/about" },
-    { name: "Services", href: "/services" },
-    { name: "Contact", href: "/contact" },
+    { name: "About", href: "#about" },
+    { name: "Services", href: "#services" },
+    { name: "Contact", href: "#contact" },
   ],
   services: [
     { name: "Book Appointment", href: "/book-appointment" },
